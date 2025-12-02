@@ -165,8 +165,8 @@ def kiemtra_bienso(bienso, loaiXe, apicaptcha, attempts=1):
                 return json.dumps({"status": "error","message": "Giải captcha sai quá 5 lần"}, ensure_ascii=False, indent=4)
         
     except Exception as e:
-        if attempts < 5:
-            time.sleep(3)
+        if attempts < 2:
+            time.sleep(1)
             return kiemtra_bienso(bienso, loaiXe, apicaptcha, attempts + 1)
         else:
             return json.dumps({"status": "error","message": "Giải captcha sai quá 5 lần"}, ensure_ascii=False, indent=4)
