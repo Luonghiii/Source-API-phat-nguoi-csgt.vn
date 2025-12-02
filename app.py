@@ -3,7 +3,7 @@ import json
 import os
 
 # Import hàm từ main.py
-from main import kiemtra_bienso
+from xuly import kiemtra_bienso
 
 app = Flask(__name__)
 
