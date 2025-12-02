@@ -1,5 +1,4 @@
-import sys
-import subprocess
+
 import time
 
 def install_library(library_name):
@@ -11,11 +10,7 @@ def install_library(library_name):
         subprocess.check_call([sys.executable, "-m", "pip", "install", library_name])
         print(f"{library_name} đã được cài đặt thành công.")
 
-# Kiểm tra và cài đặt các thư viện
-install_library("flask")
-install_library("bs4")
-install_library("requests")
-install_library("urllib3")
+
 
 """ File liên quan """
 from txtcaptcha import bypass_text_captcha
